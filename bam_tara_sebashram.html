@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>বাম তাঁরা সেবাশ্রম</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-image: url('https://drive.google.com/uc?export=view&id=1IQeL0QWbw8zqDlmld5jjKnkkXOQNTPpU');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      color: #3e1f00;
+    }
+
+    .overlay {
+      background-color: rgba(255, 248, 225, 0.9);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    header, section, footer {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #a52a2a;
+    }
+
+    .donate-button {
+      background-color: #b30000;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 30px;
+    }
+
+    .donate-button:hover {
+      background-color: #800000;
+    }
+
+    .gallery img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .modal-content img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #000;
+    }
+
+    footer {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <h1>বাম তাঁরা সেবাশ্রম</h1>
+      <p>A spiritual center devoted to tradition and devotion</p>
+      <button class="donate-button" onclick="document.getElementById('donateModal').style.display='block'">Donate Now</button>
+    </header>
+
+    <section class="content">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="https://drive.google.com/uc?export=view&id=1IQeL0QWbw8zqDlmld5jjKnkkXOQNTPpU" alt="Deity Image" />
+      </div>
+    </section>
+
+    <section>
+      <h2>Upcoming Events</h2>
+      <p>Join us for the annual Kali Puja on November 10th. Devotional programs, bhajans, and community meals all day.</p>
+    </section>
+
+    <section>
+      <h2>Visit Us</h2>
+      <p>Location of বাম তাঁরা সেবাশ্রম:</p>
+      <iframe src="https://www.google.com/maps?q=23.143291,88.551142&hl=en&z=16&output=embed"></iframe>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Bam Tara Sebashram. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Donate Modal -->
+  <div id="donateModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('donateModal').style.display='none'">&times;</span>
+      <h2>Scan to Donate</h2>
+      <img src="https://drive.google.com/uc?export=view&id=1YJpUvzrZFA2kM5JTu_-PWSfxU4QwP68c" alt="PhonePe QR Code">
+      <p>Use PhonePe or any UPI app</p>
+    </div>
+  </div>
+
+  <script>
+    window.onclick = function(event) {
+      const modal = document.getElementById('donateModal');
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
