@@ -1,163 +1,370 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>বাম তাঁরা সেবাশ্রম</title>
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      background-image: url('https://drive.google.com/uc?export=view&id=1IQeL0QWbw8zqDlmld5jjKnkkXOQNTPpU');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: center;
-      margin: 0;
-      padding: 0;
-      color: #3e1f00;
-    }
-
-    .overlay {
-      background-color: rgba(255, 248, 225, 0.9);
-      min-height: 100vh;
-      padding: 20px;
-    }
-
-    header, section, footer {
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      color: #a52a2a;
-    }
-
-    .donate-button {
-      background-color: #b30000;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      font-size: 18px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 30px;
-    }
-
-    .donate-button:hover {
-      background-color: #800000;
-    }
-
-    .gallery img {
-      width: 200px;
-      margin: 10px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      margin-top: 20px;
-    }
-
-    /* Modal Styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.7);
-    }
-
-    .modal-content {
-      background-color: #fff;
-      margin: 10% auto;
-      padding: 20px;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 400px;
-      text-align: center;
-    }
-
-    .modal-content img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 24px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .close:hover {
-      color: #000;
-    }
-
-    footer {
-      font-size: 14px;
-    }
-  </style>
-</head>
-<body>
-  <div class="overlay">
-    <header>
-      <h1>বাম তাঁরা সেবাশ্রম</h1>
-      <p>A spiritual center devoted to tradition and devotion</p>
-      <button class="donate-button" onclick="document.getElementById('donateModal').style.display='block'">Donate Now</button>
-    </header>
-
-    <section class="content">
-      <h2>Gallery</h2>
-      <div class="gallery">
-        <img src="https://drive.google.com/uc?export=view&id=1IQeL0QWbw8zqDlmld5jjKnkkXOQNTPpU" alt="Deity Image" />
-      </div>
-    </section>
-
-    <section>
-      <h2>Upcoming Events</h2>
-      <p>Join us for the annual Kali Puja on November 10th. Devotional programs, bhajans, and community meals all day.</p>
-    </section>
-
-    <section>
-      <h2>Visit Us</h2>
-      <p>Location of বাম তাঁরা সেবাশ্রম:</p>
-      <iframe src="https://www.google.com/maps?q=23.143291,88.551142&hl=en&z=16&output=embed"></iframe>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Bam Tara Sebashram. All rights reserved.</p>
-    </footer>
-  </div>
-
-  <!-- Donate Modal -->
-  <div id="donateModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="document.getElementById('donateModal').style.display='none'">&times;</span>
-      <h2>Scan to Donate</h2>
-      <img src="https://drive.google.com/uc?export=view&id=1YJpUvzrZFA2kM5JTu_-PWSfxU4QwP68c" alt="PhonePe QR Code">
-      <p>Use PhonePe or any UPI app</p>
-    </div>
-  </div>
-
-  <script>
-    window.onclick = function(event) {
-      const modal = document.getElementById('donateModal');
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-</body>
-</html>
+diff --git a/index.html b/index.html
+index 88b66fac2692f7f46e110920af39ceb868a66e06..c669d8c27ad1f62596ecc463ee2d6ac1c59fbff2 100644
+--- a/index.html
++++ b/index.html
+@@ -1,163 +1,248 @@
+-
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-  <title>বাম তাঁরা সেবাশ্রম</title>
++  <title>বাম তাঁরা সেবাশ্রম | Trust</title>
+   <style>
++    :root {
++      --temple-red: #6f1512;
++      --deep-red: #360906;
++      --vermilion: #9b2018;
++      --gold: #ffd26a;
++      --soft-gold: rgba(255, 205, 103, 0.52);
++      --cream: #fff4d5;
++    }
++
++    * {
++      box-sizing: border-box;
++    }
++
++    html {
++      scroll-behavior: smooth;
++    }
++
+     body {
+-      font-family: 'Georgia', serif;
+-      background-image: url('https://drive.google.com/uc?export=view&id=1IQeL0QWbw8zqDlmld5jjKnkkXOQNTPpU');
+-      background-size: cover;
+-      background-repeat: no-repeat;
+-      background-attachment: fixed;
+-      background-position: center;
++      min-height: 100vh;
+       margin: 0;
+-      padding: 0;
+-      color: #3e1f00;
++      font-family: Georgia, 'Times New Roman', serif;
++      color: var(--cream);
++      background:
++        radial-gradient(circle at center, rgba(168, 40, 29, 0.5), rgba(48, 7, 5, 0.96) 78%),
++        url('https://drive.google.com/uc?export=view&id=1IQeL0QWbw8zqDlmld5jjKnkkXOQNTPpU') center / cover fixed no-repeat;
++      overflow-x: hidden;
++    }
++
++    body::before,
++    body::after {
++      position: fixed;
++      inset: -18vmax;
++      z-index: -1;
++      pointer-events: none;
++      content: '';
++      background:
++        radial-gradient(circle at 25% 32%, transparent 0 8%, var(--soft-gold) 9%, transparent 13%),
++        radial-gradient(circle at 70% 60%, transparent 0 10%, rgba(255, 226, 142, 0.38) 11%, transparent 16%),
++        radial-gradient(circle at 42% 78%, rgba(255, 211, 106, 0.23), transparent 16%);
++      filter: blur(24px);
++      mix-blend-mode: screen;
++      animation: driftAura 18s ease-in-out infinite alternate;
+     }
+ 
+-    .overlay {
+-      background-color: rgba(255, 248, 225, 0.9);
++    body::after {
++      animation-duration: 26s;
++      animation-direction: alternate-reverse;
++      opacity: 0.6;
++      transform: rotate(18deg);
++    }
++
++    .page-shell {
++      position: relative;
+       min-height: 100vh;
+-      padding: 20px;
++      background:
++        linear-gradient(90deg, rgba(43, 6, 4, 0.94), rgba(100, 19, 14, 0.28) 48%, rgba(43, 6, 4, 0.94)),
++        repeating-radial-gradient(circle at center, rgba(255, 220, 130, 0.09) 0 2px, transparent 2px 13px);
+     }
+ 
+-    header, section, footer {
++    .hero {
++      display: grid;
++      place-items: center;
++      min-height: 100vh;
++      padding: 32px 20px;
+       text-align: center;
+-      padding: 40px 20px;
+     }
+ 
+-    header h1 {
+-      font-size: 2.5em;
+-      margin-bottom: 10px;
+-      color: #a52a2a;
++    .deity-card {
++      width: min(92vw, 560px);
++      padding: clamp(22px, 5vw, 48px);
++      border: 1px solid rgba(255, 211, 106, 0.28);
++      border-radius: 32px;
++      background: rgba(61, 8, 6, 0.52);
++      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.48), inset 0 0 38px rgba(255, 210, 106, 0.08);
++      backdrop-filter: blur(5px);
+     }
+ 
+-    .donate-button {
+-      background-color: #b30000;
+-      color: white;
+-      border: none;
+-      padding: 12px 25px;
+-      font-size: 18px;
+-      border-radius: 8px;
+-      cursor: pointer;
+-      margin-top: 30px;
++    .deity-image {
++      width: min(78vw, 390px);
++      aspect-ratio: 1;
++      margin: 0 auto 28px;
++      border-radius: 50%;
++      background:
++        radial-gradient(circle, transparent 44%, rgba(255, 207, 103, 0.18) 45%, transparent 67%),
++        url('https://drive.google.com/uc?export=view&id=1IQeL0QWbw8zqDlmld5jjKnkkXOQNTPpU') center / cover no-repeat;
++      box-shadow: 0 0 45px rgba(255, 207, 103, 0.24), 0 0 0 10px rgba(107, 20, 15, 0.58);
++      animation: templeGlow 5s ease-in-out infinite;
+     }
+ 
+-    .donate-button:hover {
+-      background-color: #800000;
++    .eyebrow {
++      margin: 0 0 12px;
++      color: var(--gold);
++      font-size: 0.82rem;
++      font-weight: 700;
++      letter-spacing: 0.34em;
++      text-transform: uppercase;
+     }
+ 
+-    .gallery img {
+-      width: 200px;
+-      margin: 10px;
+-      border-radius: 8px;
+-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
++    h1 {
++      margin: 0;
++      color: #fff0c2;
++      font-size: clamp(2.6rem, 10vw, 5.8rem);
++      line-height: 0.92;
++      text-shadow: 0 8px 24px rgba(0, 0, 0, 0.55), 0 0 18px rgba(255, 203, 97, 0.35);
+     }
+ 
+-    iframe {
+-      width: 100%;
+-      height: 300px;
+-      border: none;
+-      margin-top: 20px;
++    .tagline {
++      max-width: 620px;
++      margin: 22px auto 0;
++      color: rgba(255, 244, 213, 0.9);
++      font-size: clamp(1rem, 2.4vw, 1.25rem);
++      line-height: 1.7;
+     }
+ 
+-    /* Modal Styles */
+-    .modal {
+-      display: none;
+-      position: fixed;
+-      z-index: 999;
+-      left: 0;
+-      top: 0;
+-      width: 100%;
+-      height: 100%;
+-      overflow: auto;
+-      background-color: rgba(0,0,0,0.7);
+-    }
+-
+-    .modal-content {
+-      background-color: #fff;
+-      margin: 10% auto;
+-      padding: 20px;
+-      border-radius: 12px;
+-      width: 90%;
+-      max-width: 400px;
+-      text-align: center;
++    .actions {
++      display: flex;
++      flex-wrap: wrap;
++      justify-content: center;
++      gap: 14px;
++      margin-top: 34px;
++    }
++
++    .button {
++      display: inline-flex;
++      align-items: center;
++      justify-content: center;
++      min-width: 148px;
++      padding: 14px 24px;
++      border: 1px solid rgba(255, 211, 106, 0.45);
++      border-radius: 999px;
++      color: #2b0805;
++      background: linear-gradient(135deg, #ffe49a, #c48222);
++      font-weight: 700;
++      text-decoration: none;
++      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
++    }
++
++    .button.secondary {
++      color: var(--cream);
++      background: rgba(68, 8, 6, 0.55);
+     }
+ 
+-    .modal-content img {
+-      max-width: 100%;
+-      height: auto;
+-      margin-bottom: 10px;
++    .info-strip {
++      display: grid;
++      grid-template-columns: repeat(3, minmax(0, 1fr));
++      gap: 1px;
++      background: rgba(255, 211, 106, 0.18);
++      border-top: 1px solid rgba(255, 211, 106, 0.2);
+     }
+ 
+-    .close {
+-      color: #aaa;
+-      float: right;
+-      font-size: 24px;
+-      font-weight: bold;
+-      cursor: pointer;
++    .info-strip article {
++      padding: 34px 22px;
++      background: rgba(47, 6, 4, 0.82);
++      text-align: center;
++    }
++
++    .info-strip h2 {
++      margin: 0 0 10px;
++      color: var(--gold);
++      font-size: 1.15rem;
+     }
+ 
+-    .close:hover {
+-      color: #000;
++    .info-strip p {
++      margin: 0;
++      color: rgba(255, 244, 213, 0.78);
++      line-height: 1.6;
+     }
+ 
+     footer {
+-      font-size: 14px;
++      padding: 26px 20px;
++      color: rgba(255, 244, 213, 0.65);
++      background: var(--deep-red);
++      text-align: center;
++    }
++
++    @keyframes driftAura {
++      0% { transform: translate3d(-3%, -1%, 0) scale(1); }
++      50% { transform: translate3d(4%, 3%, 0) scale(1.06); }
++      100% { transform: translate3d(-1%, 5%, 0) scale(1.02); }
++    }
++
++    @keyframes templeGlow {
++      0%, 100% { box-shadow: 0 0 35px rgba(255, 207, 103, 0.18), 0 0 0 10px rgba(107, 20, 15, 0.58); }
++      50% { box-shadow: 0 0 70px rgba(255, 207, 103, 0.38), 0 0 0 10px rgba(130, 26, 18, 0.7); }
++    }
++
++    @media (max-width: 760px) {
++      .info-strip {
++        grid-template-columns: 1fr;
++      }
++
++      .deity-card {
++        border-radius: 24px;
++      }
++    }
++
++    @media (prefers-reduced-motion: reduce) {
++      *, *::before, *::after {
++        animation-duration: 0.01ms !important;
++        animation-iteration-count: 1 !important;
++        scroll-behavior: auto !important;
++      }
+     }
+   </style>
+ </head>
+ <body>
+-  <div class="overlay">
+-    <header>
+-      <h1>বাম তাঁরা সেবাশ্রম</h1>
+-      <p>A spiritual center devoted to tradition and devotion</p>
+-      <button class="donate-button" onclick="document.getElementById('donateModal').style.display='block'">Donate Now</button>
+-    </header>
+-
+-    <section class="content">
+-      <h2>Gallery</h2>
+-      <div class="gallery">
+-        <img src="https://drive.google.com/uc?export=view&id=1IQeL0QWbw8zqDlmld5jjKnkkXOQNTPpU" alt="Deity Image" />
++  <main class="page-shell">
++    <section class="hero" aria-label="Bam Tara Sebashram trust introduction">
++      <div class="deity-card">
++        <div class="deity-image" role="img" aria-label="Bam Tara deity artwork on a red sculpted temple background"></div>
++        <p class="eyebrow">Sacred Trust Website</p>
++        <h1>বাম তাঁরা সেবাশ্রম</h1>
++        <p class="tagline">A devotional home for seva, worship, and community care, inspired by the red temple sculpture artwork and softened with moving golden auras.</p>
++        <div class="actions" aria-label="Primary actions">
++          <a class="button" href="#donate">Support the Trust</a>
++          <a class="button secondary" href="#visit">Plan a Visit</a>
++        </div>
+       </div>
+     </section>
+ 
+-    <section>
+-      <h2>Upcoming Events</h2>
+-      <p>Join us for the annual Kali Puja on November 10th. Devotional programs, bhajans, and community meals all day.</p>
+-    </section>
+-
+-    <section>
+-      <h2>Visit Us</h2>
+-      <p>Location of বাম তাঁরা সেবাশ্রম:</p>
+-      <iframe src="https://www.google.com/maps?q=23.143291,88.551142&hl=en&z=16&output=embed"></iframe>
++    <section class="info-strip" aria-label="Trust highlights">
++      <article id="donate">
++        <h2>Seva & Donations</h2>
++        <p>Donation details and trust information will be added here as we build the next step.</p>
++      </article>
++      <article>
++        <h2>Daily Worship</h2>
++        <p>Share puja timings, announcements, and devotional activities for visitors and devotees.</p>
++      </article>
++      <article id="visit">
++        <h2>Visit the Ashram</h2>
++        <p>Location, contact details, and map information can be added once the layout is finalized.</p>
++      </article>
+     </section>
++  </main>
+ 
+-    <footer>
+-      <p>&copy; 2025 Bam Tara Sebashram. All rights reserved.</p>
+-    </footer>
+-  </div>
+-
+-  <!-- Donate Modal -->
+-  <div id="donateModal" class="modal">
+-    <div class="modal-content">
+-      <span class="close" onclick="document.getElementById('donateModal').style.display='none'">&times;</span>
+-      <h2>Scan to Donate</h2>
+-      <img src="https://drive.google.com/uc?export=view&id=1YJpUvzrZFA2kM5JTu_-PWSfxU4QwP68c" alt="PhonePe QR Code">
+-      <p>Use PhonePe or any UPI app</p>
+-    </div>
+-  </div>
+-
+-  <script>
+-    window.onclick = function(event) {
+-      const modal = document.getElementById('donateModal');
+-      if (event.target === modal) {
+-        modal.style.display = "none";
+-      }
+-    }
+-  </script>
++  <footer>
++    <p>&copy; 2026 Bam Tara Sebashram Trust. All rights reserved.</p>
++  </footer>
+ </body>
+ </html>
